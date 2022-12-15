@@ -1,0 +1,77 @@
+#root {
+  text-align: center;
+}
+
+
+/* Main Canvas z-index: 0 */
+.main_canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+/* App Data z-index: 1 */
+.app_data {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+
+/* Components */
+
+/* keep weather_environment_location centered in the middle of the screen */
+.weather_environment_location {
+  display: grid;
+  grid-gap: 20rem;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* WeatherEnvironment */
+.weather_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  /* give line-height a value that is 1.5 times the font-size */
+  line-height: 3.75rem;
+  color:rgba(21, 16, 50, 0.87);
+}
+
+.weather_data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* glassmorphism card */
+#weather_info_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  width: 20rem;
+  border-radius: 0.33rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2.33rem);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(21, 16, 50, 0.87);
+}
